@@ -55,3 +55,18 @@ console.log(Object.entries(tinderUser));
 
 console.log(tinderUser.hasOwnProperty('isLoggedIn')); // This will return true because the object has the property 'isLoggedIn'
 console.log(tinderUser.hasOwnProperty('isLogged')); // This will return false because the object does not have the property 'isLogged' 
+
+
+
+//----------------------------- de-structuring and JSON ------------------------------
+
+const course = {
+    coursename: "JavaScript",
+    price: 999,
+    courseInstructor: "Subhransu"
+}
+
+console.log(course.courseInstructor); //this is the normal way to access the property of an object
+
+const {courseInstructor: instructor} = course // this is the de-structuring way to access the property of an object
+console.log(instructor); // this will print the value of the property 'instructor' which is "Subhransu"
